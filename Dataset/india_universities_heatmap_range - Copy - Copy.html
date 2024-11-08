@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b3ea92e9c09d67ee861605e24741d929 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+<div style="position: fixed; 
+         bottom: 50px; left: 50px; width: 200px; height: 220px; 
+         border:2px solid grey; z-index:9999; font-size:14px;
+         background-color:white; opacity: 0.85;">
+&emsp;<b>University Ranges</b><br>
+&emsp;<div style="width: 20px; height: 20px; background-color: #FF0000; display: inline-block;"></div> 0-14<br>&emsp;<div style="width: 20px; height: 20px; background-color: #FF7F00; display: inline-block;"></div> 15-29<br>&emsp;<div style="width: 20px; height: 20px; background-color: #FFFF00; display: inline-block;"></div> 30-44<br>&emsp;<div style="width: 20px; height: 20px; background-color: #7FFF00; display: inline-block;"></div> 45-59<br>&emsp;<div style="width: 20px; height: 20px; background-color: #00FF00; display: inline-block;"></div> 60-74<br>&emsp;<div style="width: 20px; height: 20px; background-color: #00FF7F; display: inline-block;"></div> 75-89<br>&emsp;<div style="width: 20px; height: 20px; background-color: #00FFFF; display: inline-block;"></div> 90-104<br></div>
+    
+            <div class="folium-map" id="map_b3ea92e9c09d67ee861605e24741d929" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b3ea92e9c09d67ee861605e24741d929 = L.map(
+                "map_b3ea92e9c09d67ee861605e24741d929",
+                {
+                    center: [20.5937, 78.9629],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d5ab7f46c4fc3a5de3ae16cdefc81a7b = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_d5ab7f46c4fc3a5de3ae16cdefc81a7b.addTo(map_b3ea92e9c09d67ee861605e24741d929);
+        
+    
+            var marker_ee0c4c2e26450f0afd768ac7625ed5de = L.marker(
+                [11.7401, 92.6586],
+                {}
+            ).addTo(map_b3ea92e9c09d67ee861605e24741d929);
+        
+    
+            marker_ee0c4c2e26450f0afd768ac7625ed5de.bindTooltip(
+                `<div>
+                     Andaman and Nicobar Islands: 0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_947b51c3f15edb3b1596ddbe4af9d4f5 = L.marker(
+                [15.9129, 79.74],
+                {}
+            ).addTo(map_b3ea92e9c09d67ee861605e24741d929);
+        
+    
+            marker_947b51c3f15edb3b1596ddbe4af9d4f5.bindTooltip(
+                `<div>
+                     Andhra Pradesh: 41
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9655187b312af214540d8663d1a10597 = L.marker(
+                [28.218, 94.7278],
+                {}
+            ).addTo(map_b3ea92e9c09d67ee861605e24741d929);
+        
+    
+            marker_9655187b312af214540d8663d1a10597.bindTooltip(
+                `<div>
+                     Arunachal Pradesh: 10
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d760cfc824281727f553a54c4cfa6fe7 = L.marker(
+                [26.2006, 92.9376],
+                {}
+            ).addTo(map_b3ea92e9c09d67ee861605e24741d929);
+        
+    
+            marker_d760cfc824281727f553a54c4cfa6fe7.bindTooltip(
+                `<div>
+                     Assam: 26
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_039623407e9b8dec18dabd14aabd5c50 = L.marker(
+                [25.0961, 85.3131],
+                {}
+            ).addTo(map_b3ea92e9c09d67ee861605e24741d929);
+        
+    
+            marker_039623407e9b8dec18dabd14aabd5c50.bindTooltip(
+                `<div>
+                     Bihar: 35
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2b4aa55ea4f425fcc36b900370f8da92 = L.marker(
+                [30.7333, 76.7794],
+                {}
+            ).addTo(map_b3ea92e9c09d67ee861605e24741d929);
+        
+    
+            marker_2b4aa55ea4f425fcc36b900370f8da92.bindTooltip(
+                `<div>
+                     Chandigarh: 3
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_62093cc3e30fdb07a8212900c33bb898 = L.marker(
+                [21.2787, 81.8661],
+                {}
+            ).addTo(map_b3ea92e9c09d67ee861605e24741d929);
+        
+    
+            marker_62093cc3e30fdb07a8212900c33bb898.bindTooltip(
+                `<div>
+                     Chhattisgarh: 28
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0fe0907b9d22ed7956050aa57a5540ae = L.marker(
+                [28.7041, 77.1025],
+                {}
+            ).addTo(map_b3ea92e9c09d67ee861605e24741d929);
+        
+    
+            marker_0fe0907b9d22ed7956050aa57a5540ae.bindTooltip(
+                `<div>
+                     Delhi: 28
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_dce9addcbdf91688697e01af79826ab6 = L.marker(
+                [15.2993, 74.124],
+                {}
+            ).addTo(map_b3ea92e9c09d67ee861605e24741d929);
+        
+    
+            marker_dce9addcbdf91688697e01af79826ab6.bindTooltip(
+                `<div>
+                     Goa: 3
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_66bfe752671a8685840949f9f5f875b8 = L.marker(
+                [22.2587, 71.1924],
+                {}
+            ).addTo(map_b3ea92e9c09d67ee861605e24741d929);
+        
+    
+            marker_66bfe752671a8685840949f9f5f875b8.bindTooltip(
+                `<div>
+                     Gujarat: 76
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8cf31871d9d78f87271169b01267d2d6 = L.marker(
+                [29.0588, 76.0856],
+                {}
+            ).addTo(map_b3ea92e9c09d67ee861605e24741d929);
+        
+    
+            marker_8cf31871d9d78f87271169b01267d2d6.bindTooltip(
+                `<div>
+                     Haryana: 53
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_63e49d0fdc5724893dd7801714fc777d = L.marker(
+                [31.1048, 77.1734],
+                {}
+            ).addTo(map_b3ea92e9c09d67ee861605e24741d929);
+        
+    
+            marker_63e49d0fdc5724893dd7801714fc777d.bindTooltip(
+                `<div>
+                     Himachal Pradesh: 27
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_27313b7f6abee58049c62d9cec4dd858 = L.marker(
+                [23.6102, 85.2799],
+                {}
+            ).addTo(map_b3ea92e9c09d67ee861605e24741d929);
+        
+    
+            marker_27313b7f6abee58049c62d9cec4dd858.bindTooltip(
+                `<div>
+                     Jharkhand: 32
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_78e7bd061d9c785e37839364af0bf879 = L.marker(
+                [15.3173, 75.7139],
+                {}
+            ).addTo(map_b3ea92e9c09d67ee861605e24741d929);
+        
+    
+            marker_78e7bd061d9c785e37839364af0bf879.bindTooltip(
+                `<div>
+                     Karnataka: 69
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8a8cf4a5a71a86d1e0cc0c0342a3915f = L.marker(
+                [10.8505, 76.2711],
+                {}
+            ).addTo(map_b3ea92e9c09d67ee861605e24741d929);
+        
+    
+            marker_8a8cf4a5a71a86d1e0cc0c0342a3915f.bindTooltip(
+                `<div>
+                     Kerala: 23
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7df704c22e2fa23a7d8ac9a19f1c69c5 = L.marker(
+                [34.1526, 77.5771],
+                {}
+            ).addTo(map_b3ea92e9c09d67ee861605e24741d929);
+        
+    
+            marker_7df704c22e2fa23a7d8ac9a19f1c69c5.bindTooltip(
+                `<div>
+                     Ladakh: 1
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f11110e19cce68b695961a87639e7e5a = L.marker(
+                [10.5667, 72.6417],
+                {}
+            ).addTo(map_b3ea92e9c09d67ee861605e24741d929);
+        
+    
+            marker_f11110e19cce68b695961a87639e7e5a.bindTooltip(
+                `<div>
+                     Lakshadweep: 0
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b4a332d87a0be71e864e0a16a0f6455d = L.marker(
+                [22.9734, 78.6569],
+                {}
+            ).addTo(map_b3ea92e9c09d67ee861605e24741d929);
+        
+    
+            marker_b4a332d87a0be71e864e0a16a0f6455d.bindTooltip(
+                `<div>
+                     Madhya Pradesh: 66
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_16aef2b908afe2caa172959c070f4f22 = L.marker(
+                [19.7515, 75.7139],
+                {}
+            ).addTo(map_b3ea92e9c09d67ee861605e24741d929);
+        
+    
+            marker_16aef2b908afe2caa172959c070f4f22.bindTooltip(
+                `<div>
+                     Maharashtra: 65
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8f9b3a37000c12b14b1e070578230013 = L.marker(
+                [24.6637, 93.9063],
+                {}
+            ).addTo(map_b3ea92e9c09d67ee861605e24741d929);
+        
+    
+            marker_8f9b3a37000c12b14b1e070578230013.bindTooltip(
+                `<div>
+                     Manipur: 8
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a7ee35c20608ad3304bf6d86fb75be94 = L.marker(
+                [25.467, 91.3662],
+                {}
+            ).addTo(map_b3ea92e9c09d67ee861605e24741d929);
+        
+    
+            marker_a7ee35c20608ad3304bf6d86fb75be94.bindTooltip(
+                `<div>
+                     Meghalaya: 10
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3946c1229b6589fbe26792c9343e4ce4 = L.marker(
+                [23.1645, 92.9376],
+                {}
+            ).addTo(map_b3ea92e9c09d67ee861605e24741d929);
+        
+    
+            marker_3946c1229b6589fbe26792c9343e4ce4.bindTooltip(
+                `<div>
+                     Mizoram: 3
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bf13f3b24941d9ae0acc335ec41cd159 = L.marker(
+                [26.1584, 94.5624],
+                {}
+            ).addTo(map_b3ea92e9c09d67ee861605e24741d929);
+        
+    
+            marker_bf13f3b24941d9ae0acc335ec41cd159.bindTooltip(
+                `<div>
+                     Nagaland: 5
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_901b28ee98d349cb10bc0f7d2da839a2 = L.marker(
+                [20.9517, 85.0985],
+                {}
+            ).addTo(map_b3ea92e9c09d67ee861605e24741d929);
+        
+    
+            marker_901b28ee98d349cb10bc0f7d2da839a2.bindTooltip(
+                `<div>
+                     Odisha: 32
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3ce10cee2e54345a6bfe6f3509eb8835 = L.marker(
+                [11.9416, 79.8083],
+                {}
+            ).addTo(map_b3ea92e9c09d67ee861605e24741d929);
+        
+    
+            marker_3ce10cee2e54345a6bfe6f3509eb8835.bindTooltip(
+                `<div>
+                     Puducherry: 4
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_795e35e5bd635ac8d2495475b5eb13fc = L.marker(
+                [31.1471, 75.3412],
+                {}
+            ).addTo(map_b3ea92e9c09d67ee861605e24741d929);
+        
+    
+            marker_795e35e5bd635ac8d2495475b5eb13fc.bindTooltip(
+                `<div>
+                     Punjab: 32
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8783a3f327177de096c849576c1cc57b = L.marker(
+                [27.0238, 74.2179],
+                {}
+            ).addTo(map_b3ea92e9c09d67ee861605e24741d929);
+        
+    
+            marker_8783a3f327177de096c849576c1cc57b.bindTooltip(
+                `<div>
+                     Rajasthan: 89
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_42003f8ba6ebc40ffad5b65cc589b387 = L.marker(
+                [27.533, 88.5122],
+                {}
+            ).addTo(map_b3ea92e9c09d67ee861605e24741d929);
+        
+    
+            marker_42003f8ba6ebc40ffad5b65cc589b387.bindTooltip(
+                `<div>
+                     Sikkim: 8
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f3a6e71ad701cef492f3b7757d0263d5 = L.marker(
+                [11.1271, 78.6569],
+                {}
+            ).addTo(map_b3ea92e9c09d67ee861605e24741d929);
+        
+    
+            marker_f3a6e71ad701cef492f3b7757d0263d5.bindTooltip(
+                `<div>
+                     Tamil Nadu: 59
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7521c8e072c2a91b92d21f306b4faf32 = L.marker(
+                [17.1232, 79.2088],
+                {}
+            ).addTo(map_b3ea92e9c09d67ee861605e24741d929);
+        
+    
+            marker_7521c8e072c2a91b92d21f306b4faf32.bindTooltip(
+                `<div>
+                     Telangana: 24
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e3152032132b65f06722799bdc21d20c = L.marker(
+                [23.9408, 91.9882],
+                {}
+            ).addTo(map_b3ea92e9c09d67ee861605e24741d929);
+        
+    
+            marker_e3152032132b65f06722799bdc21d20c.bindTooltip(
+                `<div>
+                     Tripura: 4
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f469ee0bcaa02ecc8fdda60c0517ac65 = L.marker(
+                [26.8467, 80.9462],
+                {}
+            ).addTo(map_b3ea92e9c09d67ee861605e24741d929);
+        
+    
+            marker_f469ee0bcaa02ecc8fdda60c0517ac65.bindTooltip(
+                `<div>
+                     Uttar Pradesh: 81
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2dce5093ed5a63f3b8235c90278f8efb = L.marker(
+                [30.0668, 79.0193],
+                {}
+            ).addTo(map_b3ea92e9c09d67ee861605e24741d929);
+        
+    
+            marker_2dce5093ed5a63f3b8235c90278f8efb.bindTooltip(
+                `<div>
+                     Uttarakhand: 36
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a9d0c1b0d1732b8598fbe8e0cb581780 = L.marker(
+                [22.9868, 87.855],
+                {}
+            ).addTo(map_b3ea92e9c09d67ee861605e24741d929);
+        
+    
+            marker_a9d0c1b0d1732b8598fbe8e0cb581780.bindTooltip(
+                `<div>
+                     West Bengal: 47
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var heat_map_ac23a1b6bbe2834c678dd4a49a2d1049 = L.heatLayer(
+                [[11.7401, 92.6586, 0], [15.9129, 79.74, 41], [28.218, 94.7278, 10], [26.2006, 92.9376, 26], [25.0961, 85.3131, 35], [30.7333, 76.7794, 3], [21.2787, 81.8661, 28], [28.7041, 77.1025, 28], [15.2993, 74.124, 3], [22.2587, 71.1924, 76], [29.0588, 76.0856, 53], [31.1048, 77.1734, 27], [23.6102, 85.2799, 32], [15.3173, 75.7139, 69], [10.8505, 76.2711, 23], [34.1526, 77.5771, 1], [10.5667, 72.6417, 0], [22.9734, 78.6569, 66], [19.7515, 75.7139, 65], [24.6637, 93.9063, 8], [25.467, 91.3662, 10], [23.1645, 92.9376, 3], [26.1584, 94.5624, 5], [20.9517, 85.0985, 32], [11.9416, 79.8083, 4], [31.1471, 75.3412, 32], [27.0238, 74.2179, 89], [27.533, 88.5122, 8], [11.1271, 78.6569, 59], [17.1232, 79.2088, 24], [23.9408, 91.9882, 4], [26.8467, 80.9462, 81], [30.0668, 79.0193, 36], [22.9868, 87.855, 47]],
+                {"blur": 15, "maxZoom": 18, "minOpacity": 0.5, "radius": 25}
+            );
+        
+    
+            heat_map_ac23a1b6bbe2834c678dd4a49a2d1049.addTo(map_b3ea92e9c09d67ee861605e24741d929);
+        
+</script>
+</html>
